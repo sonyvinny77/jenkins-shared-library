@@ -8,6 +8,7 @@ def call(Map config) {
     sh 'mvn clean package'
 
     sh """
-        cp target/*.war ${config.tomcatPath}/${config.appName}.war
+        cp webapp/target/*.war ${config.tomcatPath}/${config.appName}.war
     """
 }
+
